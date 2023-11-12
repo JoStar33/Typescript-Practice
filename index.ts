@@ -1,6 +1,6 @@
-import Items from "./src/Items";
-import ItemCollection from "./src/ItemCollection";
-import {data} from "./src/data";
+import Items from "./src/chapter1/Items";
+import ItemCollection from "./src/chapter1/ItemCollection";
+import {data} from "./src/chapter1/data";
 
 /*
 console.log(`Items\n`);
