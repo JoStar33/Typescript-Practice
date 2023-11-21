@@ -1,7 +1,7 @@
 //Record는 키타입에 유연성을 제공하는 제네릭 타입이다.
-type Vec3D = Record<'x' | 'y' | 'z', number>;
+type Vec3DD = Record<'x' | 'y' | 'z', number>;
 
-const vec3D: Vec3D = {
+const vec3DD: Vec3DD = {
   x: 1,
   y: 1,
   z: 1,
