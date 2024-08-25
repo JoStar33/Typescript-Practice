@@ -13,3 +13,26 @@ const testValue = 123;
 type NewFuntionType = FuntionType<typeof add>; //[[a: number, b: number], number]
 
 type NewFuntionType2 = FuntionType<typeof testValue>; //string
+
+type TReturnType<T extends (...args: any) => any> = T extends (
+  ...args: any
+) => infer R
+  ? R
+  : any;
+
+function data() {
+  return {
+    name: "were",
+    age: 23,
+  };
+}
+
+// 추론가능한 타입 data
+const test: TReturnType<typeof data> = {
+  name: "sdfd",
+  age: 23,
+};
+
+type PromiseType<T> = T extends Promise<infer U> ? U : never;
+
+const testPromise: PromiseType<Promise<number>> = 3; // number
